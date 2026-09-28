@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("Wallpaper2.png") center center / cover no-repeat fixed;
+    color: #333;
+    padding: 30px 20px;
+    min-height: 100vh;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff237f;
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+h2 {
+    color: #ff237f;
+    font-size: 20px;
+    margin: 25px 0 15px 0;
+    font-weight: 700;
+}
+
+.light-heading {
+    color: aliceblue;
+}
+
+p {
+    font-size: 15px;
+    max-width: 600px;
+    line-height: 1.8;
+    margin: 0 auto 15px;
+    color: #555;
+}
+
+.main-content img {
+    max-width: 100%;
+    width: 350px;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(255, 35, 127, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.main-content img:hover {
+    transform: scale(1.05);
+}
+
+.interactive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    width: min(900px, 100%);
+    margin-top: 30px;
+}
+
+.box {
+    background: linear-gradient(135deg, #ff237f 0%, #d81b60 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 35, 127, 0.2);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+}
+
+.box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.box[open] {
+    background: #ff4b93;
+}
+
+.box summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.box summary::-webkit-details-marker {
+    display: none;
+}
+
+.box .box-text {
+    margin: 10px 0 0;
+    color: #ffffff;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.box[open] .box-text {
+    max-height: 120px;
+    opacity: 1;
+}
+
+.section {
+    width: min(900px, 100%);
+    margin-top: 40px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.section h3,
+.school-offices-section h3,
+.contact-section h3 {
+    color: #ff237f;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #ff237f 0%, #d81b60 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+.announcement {
+    background: #fff3e0;
+    border-left: 4px solid #ff237f;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+footer {
+    background-color: #3e373a;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    margin-top: 40px;
+    font-weight: bold;
+}

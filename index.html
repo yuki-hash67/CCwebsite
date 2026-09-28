@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>City College of San Jose del Monte</title>
+     <style>
+          * {
+               box-sizing: border-box;
+          }
+
+          html,
+          body {
+               margin: 0;
+               min-height: 100%;
+          }
+
+          .site-header iframe {
+               display: block;
+               width: 100%;
+               height: 145px;
+               border: 0;
+          }
+
+          .site-grid {
+               display: grid;
+               grid-template-columns: minmax(180px, 1fr) minmax(0, 3.5fr) minmax(200px, 1fr);
+               gap: 12px;
+               padding: 12px;
+               max-width: 1600px;
+               margin: 0 auto;
+          }
+
+          .site-grid iframe {
+               display: block;
+               width: 100%;
+               height: calc(100vh - 169px);
+               min-height: 560px;
+               border: 0;
+          }
+
+          @media (max-width: 900px) {
+               .site-header iframe {
+                    height: 135px;
+               }
+
+               .site-grid {
+                    grid-template-columns: minmax(0, 1fr);
+                    gap: 8px;
+                    padding: 8px;
+               }
+
+               .site-menu iframe {
+                    height: 310px;
+                    min-height: 0;
+               }
+
+               .site-content iframe {
+                    height: 75vh;
+                    min-height: 520px;
+               }
+
+               .site-aside {
+                    display: none;
+               }
+          }
+     </style>
+</head>
+<body>
+     <header class="site-header">
+          <iframe src="header.html" title="College header"></iframe>
+     </header>
+     <div class="site-grid">
+          <nav class="site-menu" aria-label="Main menu">
+               <iframe src="left.html" title="Main menu"></iframe>
+          </nav>
+          <main class="site-content">
+               <iframe src="main.html" name="contentFrame" title="Page content"></iframe>
+          </main>
+          <aside class="site-aside">
+               <iframe src="right.html" title="College contents"></iframe>
+          </aside>
+     </div>
+</body>
+</html>
